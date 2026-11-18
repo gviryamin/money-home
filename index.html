@@ -3,34 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#7c3aed">
-<title>הכסף של הבית</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>">
+<meta name="theme-color" content="#FFF3E8">
+<title>קליל · הכסף של הבית</title>
+<link rel="preload" href="fonts/Rubik-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Fredoka-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 84'><circle cx='42' cy='42' r='38' fill='%23FFD44D' stroke='%231B1410' stroke-width='4'/><circle cx='30' cy='36' r='5' fill='%231B1410'/><circle cx='54' cy='36' r='5' fill='%231B1410'/><path d='M28 50c5 10 23 10 28 0' fill='none' stroke='%231B1410' stroke-width='4' stroke-linecap='round'/></svg>">
 </head>
 <body>
 <div id="app">
-  <div id="demoBanner" class="demo-banner hidden">מצב דוגמה: כל הנתונים כאן מומצאים</div>
-  <header id="topbar" class="topbar hidden">
-    <button id="profileBtn" class="avatar-btn" aria-label="החלפת פרופיל"></button>
-    <div class="top-title"><div id="hello" class="hello"></div><div id="levelMini" class="level-mini"></div></div>
-    <button id="settingsBtn" class="icon-btn" aria-label="הגדרות">⚙️</button>
-  </header>
+  <div id="demoPill" class="demo-pill hidden">נתוני דוגמה</div>
   <main id="stage"></main>
-  <nav id="tabbar" class="tabbar hidden">
-    <button data-tab="home" class="tab active"><span class="ti">🏠</span><span>בית</span></button>
-    <button data-tab="budget" class="tab"><span class="ti">🎯</span><span>תקציב</span></button>
-    <button id="fab" class="fab" aria-label="הוספת הוצאה">＋</button>
-    <button data-tab="guide" class="tab"><span class="ti">🧭</span><span>הכוונה</span></button>
-    <button data-tab="achieve" class="tab"><span class="ti">🏆</span><span>הישגים</span></button>
-  </nav>
-  <div id="sheetWrap" class="sheet-wrap hidden"><div class="sheet-backdrop"></div><div id="sheet" class="sheet"></div></div>
-  <div id="toasts" class="toasts"></div>
-  <canvas id="confetti"></canvas>
+  <nav id="dock" class="dock away" aria-label="ניווט ראשי"></nav>
+  <div id="sheetWrap" class="sheet-wrap hidden"><div class="sheet-backdrop"></div><div id="sheet" class="sheet" role="dialog" aria-modal="true"></div></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
 </div>
-<script src="app.js"></script>
+<script src="config.js?v=2"></script>
+<script src="sync.js?v=2"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
