@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#7c3aed">
+<title>הכסף של הבית</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐷</text></svg>">
+</head>
+<body>
+<div id="app">
+  <div id="demoBanner" class="demo-banner hidden">מצב דוגמה: כל הנתונים כאן מומצאים</div>
+  <header id="topbar" class="topbar hidden">
+    <button id="profileBtn" class="avatar-btn" aria-label="החלפת פרופיל"></button>
+    <div class="top-title"><div id="hello" class="hello"></div><div id="levelMini" class="level-mini"></div></div>
+    <button id="settingsBtn" class="icon-btn" aria-label="הגדרות">⚙️</button>
+  </header>
+  <main id="stage"></main>
+  <nav id="tabbar" class="tabbar hidden">
+    <button data-tab="home" class="tab active"><span class="ti">🏠</span><span>בית</span></button>
+    <button data-tab="budget" class="tab"><span class="ti">🎯</span><span>תקציב</span></button>
+    <button id="fab" class="fab" aria-label="הוספת הוצאה">＋</button>
+    <button data-tab="guide" class="tab"><span class="ti">🧭</span><span>הכוונה</span></button>
+    <button data-tab="achieve" class="tab"><span class="ti">🏆</span><span>הישגים</span></button>
+  </nav>
+  <div id="sheetWrap" class="sheet-wrap hidden"><div class="sheet-backdrop"></div><div id="sheet" class="sheet"></div></div>
+  <div id="toasts" class="toasts"></div>
+  <canvas id="confetti"></canvas>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
